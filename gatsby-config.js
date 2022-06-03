@@ -8,7 +8,7 @@ module.exports = {
     description: `A blockchain/ethereum/solidity smart contracts security blog`,
     siteUrl: `https://www.tomasfreire.com`,
     social: {
-      medium: `www.medium.com/tomasfrancisco`,
+      medium: `tomasfrancisco`,
     },
   },
   plugins: [
