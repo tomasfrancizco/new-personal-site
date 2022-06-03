@@ -5,7 +5,7 @@ module.exports = {
       name: `Tomás`,
       summary: `desarrollador solidity y javascript de Buenos Aires, con un gran interés por la seguridad en Smart Contracts.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blockchain/ethereum/solidity smart contracts security blog`,
     siteUrl: `https://www.tomasfreire.com`,
     social: {
       medium: `www.medium.com/tomasfrancisco`,
