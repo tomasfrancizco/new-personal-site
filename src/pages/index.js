@@ -30,8 +30,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
-          return (
+          return !title.includes("NOPOST") ? (
             <li key={post.fields.slug}>
               <article
                 className="post-list-item"
@@ -56,7 +55,7 @@ const BlogIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
-          )
+          ) : null
         })}
       </ol>
     </Layout>

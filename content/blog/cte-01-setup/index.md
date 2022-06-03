@@ -1,9 +1,11 @@
 ---
 title: "Capture The Ether: setup"
-date: "2021-12-30T22:40:32.169Z"
+date: "2021-12-20T22:40:32.169Z"
 description: This is the first of multiple articles i’m going to write in which i’ll analyse, explain and solve some CTF (Capture The Flag) challenges of the Ethereum ecosystem.
 ---
 
+[Link to Medium article](https://medium.com/@tomasfrancisco/capture-the-flag-setup-4f4e5b2658f8)
+<!-- 
 This is the first of multiple articles i’m going to write in which i’ll analyse, explain and solve some CTF (Capture The Flag) challenges of the Ethereum ecosystem. These are exercises in which one must find and exploit one or several vulnerabilities in (in this case) Smart Contracts.
 
 There are a bunch of sites for this but the most famous and the ones I’ll try are Capture The Ether, Damn Vulnerable Defi and The Ethernaut.
@@ -26,4 +28,4 @@ To access the faucet, click on “buy” under the amount of ETH in your account
 That’s it, now you’re ready to start solving the challenges. In the next article I’m going to dive deep into the warmup exercises.
 
 This is a never-ending path of learning, so if you have any comment or correction, please leave it in the comments below and I’ll be more than happy to discuss it.
-
+ -->

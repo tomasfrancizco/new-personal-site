@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Tomás Freire Knight`,
     author: {
-      name: `Tomás Freire Knight`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Tomás`,
+      summary: `desarrollador solidity y javascript de Buenos Aires, con un gran interés por la seguridad en Smart Contracts.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://www.tomasfreire.com`,
     social: {
-      twitter: `kylemathews`,
+      medium: `www.medium.com/tomasfrancisco`,
     },
   },
   plugins: [
