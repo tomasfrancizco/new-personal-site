@@ -47,7 +47,7 @@ const Bio = () => {
           Soy <strong>{author.name}</strong>, {author?.summary || null}
           {` `}
           <a href={`https://www.medium.com/${social?.medium || ``}`}>
-            Seguime también en Medium
+            Seguime en Medium.
           </a>
         </p>
       )}
