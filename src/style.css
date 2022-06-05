@@ -86,12 +86,12 @@ body {
 }
 
 body.dark {
-  --color-primary: #EEEEEE;
+  --color-primary: #8FD6E1;
   --color-text: #EEEEEE;
   --color-text-light: #EEEEEE;
   --color-heading: #EEEEEE;
   --color-heading-black: #EEEEEE;
-  --color-accent: #D65A31;
+  --color-accent: #EEEEEE;
   --color-background: #222831;
   color: var(--color-text);
   background-color: var(--color-background);
