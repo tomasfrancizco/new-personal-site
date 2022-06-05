@@ -54,12 +54,6 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
 }
 
 /* HTML elements */
@@ -78,14 +72,98 @@ html {
 }
 
 body {
+  --color-primary: #005b99;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: black;
+  --color-accent: #d1dce5;
+  --color-background: white;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body.dark {
+  --color-primary: #EEEEEE;
+  --color-text: #EEEEEE;
+  --color-text-light: #EEEEEE;
+  --color-heading: #EEEEEE;
+  --color-heading-black: #EEEEEE;
+  --color-accent: #D65A31;
+  --color-background: #222831;
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
+
+/* dark mode style begins */
+
+#toggle-main-container {
+  margin-top: -20px;
+  margin-bottom: 35px;
+}
+
+#toggle-container {
+  background: #BFCEDA;
+  position: relative;
+  height: 25px;
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#ball {
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.light-theme {
+  top: 2px;
+  left: 2px;
+  background: #f0f0a4;
+  transition: all 0.5s ease;
+}
+
+.light-theme::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px dotted #f0f0a4;
+}
+
+.dark-theme {
+  top: 2px;
+  left: 27px;
+  background: white;
+  overflow: hidden;
+  border: 0;
+  transition: all 0.5s ease;
+}
+
+.dark-theme::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background-color: lightgray;
+  border-radius: 50%;
+  left: 8px;
+  bottom: 6px;
+}
+
+/* dark mode style ends */
 
 hr {
   background: var(--color-accent);
