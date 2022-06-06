@@ -78,7 +78,7 @@ body {
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
-  --color-background: white;
+  --color-background: #eeeeee;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
@@ -126,27 +126,27 @@ footer {
 
 .light-theme {
   top: 2px;
-  left: 2px;
-  background: #f0f0a4;
+  left: 27px;
+  background: var(--color-background);
   transition: all 0.5s ease;
 }
 
 .light-theme::before {
   content: "";
   position: absolute;
-  left: -2px;
-  top: -2px;
+  left: -1.5px;
+  top: -1.5px;
   width: 24px;
   height: 24px;
   background: transparent;
   border-radius: 50%;
-  border: 1px dotted #f0f0a4;
+  border: 1px dotted var(--color-background);
 }
 
 .dark-theme {
   top: 2px;
-  left: 27px;
-  background: white;
+  left: 2px;
+  background: #222831;
   overflow: hidden;
   border: 0;
   transition: all 0.5s ease;
@@ -157,7 +157,7 @@ footer {
   position: absolute;
   width: 21px;
   height: 21px;
-  background-color: lightgray;
+  background-color: #BFCEDA;
   border-radius: 50%;
   left: 8px;
   bottom: 6px;
