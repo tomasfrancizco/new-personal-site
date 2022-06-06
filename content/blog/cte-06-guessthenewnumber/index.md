@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: guess the new number"
 date: "2022-01-14T22:12:03.284Z"
-description: "In this challenge we need to guess a new number with some similar characteristics to the previous one."
+description: En este ejercicio tendremos que adivinar un nuevo número.
 ---
 
 [Link to Medium article](https://coinsbench.com/capture-the-ether-guess-the-new-number-fa8df008023c)

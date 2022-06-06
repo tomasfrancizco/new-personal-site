@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: predict the block hash"
 date: "2022-03-02T22:12:03.284Z"
-description: "Let’s start by technically and conceptually understanding what we are trying to achieve in this challenge."
+description: El objetivo de este ejercicio es adivinar un número hexadecimal de 64 caracteres, así que mejor que empecemos pronto.
 ---
 
 [Link to Medium article](https://systemweakness.com/capture-the-ether-predict-the-block-hash-bdbaf870cd5d)

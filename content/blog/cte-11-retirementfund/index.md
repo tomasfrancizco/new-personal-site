@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: retirement fund"
 date: "2022-04-06T22:12:03.284Z"
-description: "The solution for this challenge is very straight forward... Or is it?"
+description: "La solución para este ejercicio es muy simple: podemos esperar 10 años y voilá!"
 ---
 
 [Link to Medium article](https://medium.com/coinmonks/capture-the-ether-retirement-fund-f56f7bb2e4de)

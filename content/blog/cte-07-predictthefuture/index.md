@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: predict the future"
 date: "2022-02-08T22:12:03.284Z"
-description: "Is it possible to predict the future in the Ethereum world? The answer is: kind of."
+description: "Es posible predecir el futuro en Ethereum? La respuesta: más o menos."
 ---
 
 [Link to Medium article](https://coinsbench.com/capture-the-ether-predict-the-future-cb5acf12a8cb)

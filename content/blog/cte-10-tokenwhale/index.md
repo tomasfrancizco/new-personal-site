@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: token whale"
 date: "2022-03-29T22:12:03.284Z"
-description: "Our objective here is to accumulate at least 1,000,000 SET tokens."
+description: En este desafío intentaremos acumular más de 1 millón de tokens.
 ---
 
 [Link to Medium article](https://coinsbench.com/capture-the-ether-token-whale-8d33ea2fd754)

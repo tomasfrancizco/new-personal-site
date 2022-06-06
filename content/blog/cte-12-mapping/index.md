@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: mapping"
 date: "2022-05-09T22:12:03.284Z"
-description: "Let's dive into Ethereum’s storage layout."
+description: Metámonos de lleno en el diseño de almacenamiento de Ethereum.
 ---
 
 [Link to Medium article](https://coinsbench.com/capture-the-ether-mapping-ab24ac2c9244)

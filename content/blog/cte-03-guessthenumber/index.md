@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: guess the number"
 date: "2021-12-23T22:12:03.284Z"
-description: "Let’s find our first vulnerability."
+description: Encontremos nuesta primera vulnerabilidad.
 ---
 
 [Link to Medium article](https://medium.com/@tomasfrancisco/capture-the-ether-guess-the-number-c96bbb808bf3)

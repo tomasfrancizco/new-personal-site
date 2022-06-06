@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: Guess the Random Number on a Smart Contract"
 date: "2022-01-10T22:12:03.284Z"
-description: "Send ether to earn more ether (if the answer is right)"
+description: "La promesa finalmente se cumple: si enviamos ether recibiremos más ether (si la respuesta es correcta)"
 ---
 
 [Link to Medium article](https://betterprogramming.pub/capture-the-ether-guess-the-random-number-2ebb8c9c0347)
