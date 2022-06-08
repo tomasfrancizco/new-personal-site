@@ -7,7 +7,7 @@ const DarkMode = () => {
 
   useEffect(() => {
     const theme = window.document.body.getAttribute("class");
-    theme == "dark" ? setDarkTheme("light-theme") : setDarkTheme("dark-theme")
+    theme === "dark" ? setDarkTheme("light-theme") : setDarkTheme("dark-theme")
   }, [])
 
   return(
@@ -17,8 +17,8 @@ const DarkMode = () => {
           return (
             <div>
               <div id="toggle-container" onClick={() => {
-                setDarkTheme(darkTheme == "light-theme" ? "dark-theme" : "light-theme")
-                toggleTheme(theme == "light" ? "dark" : "light")
+                setDarkTheme(darkTheme === "light-theme" ? "dark-theme" : "light-theme")
+                toggleTheme(theme === "light" ? "dark" : "light")
               }}>
                 <div id="ball" className={darkTheme}></div>
               </div>
