@@ -79,6 +79,7 @@ body {
   --color-heading-black: black;
   --color-accent: #d1dce5;
   --color-background: #eeeeee;
+  --position-left: 0.5px;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
@@ -93,6 +94,7 @@ body.dark {
   --color-heading-black: #EEEEEE;
   --color-accent: #EEEEEE;
   --color-background: #222831;
+  --position-left: 26px;
   color: var(--color-text);
   background-color: var(--color-background);
 }
@@ -116,54 +118,21 @@ footer {
   border-radius: 25px;
   cursor: pointer;
   border: 2px solid white;
-  /* box-shadow:  -2px -2px 5px #6e6e6e, 2px 2px 5px #ffffff; */
 }
 
 #ball {
   height: 20px;
   width: 20px;
+  top: 0.5px;
   border-radius: 50%;
   position: absolute;
   border: 0px;
 }
 
 .light-theme {
-  top: 0.5px;
-  left: 26px;
+  left: var(--position-left);
   background: var(--color-background);
-  transition: all 0.5s ease;
-}
-
-.light-theme::before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 22px;
-  height: 22px;
-  background: transparent;
-  border-radius: 50%;
-  border: 1px dotted var(--color-background);
-}
-
-.dark-theme {
-  top: 0.5px;
-  left: 0.5px;
-  background: #222831;
-  overflow: hidden;
-  border: 0;
-  transition: all 0.5s ease;
-}
-
-.dark-theme::after {
-  content: "";
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  background-color: #BFCEDA;
-  border-radius: 50%;
-  left: 8px;
-  bottom: 6px;
+  transition: all 0.2s ease;
 }
 
 /* dark mode style ends */
