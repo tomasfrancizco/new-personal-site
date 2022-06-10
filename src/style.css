@@ -79,7 +79,7 @@ body {
   --color-heading-black: black;
   --color-accent: #d1dce5;
   --color-background: #eeeeee;
-  --color-toggler: #2e353f;
+  /* --color-toggler: #2e353f; */
   --position-left: 0.5px;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
@@ -95,7 +95,7 @@ body.dark {
   --color-heading-black: #EEEEEE;
   --color-accent: #EEEEEE;
   --color-background: #222831;
-  --color-toggler: #eeeeee;
+  /* --color-toggler: #eeeeee; */
   --position-left: 26px;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -133,8 +133,23 @@ footer {
 
 .light-theme {
   left: var(--position-left);
-  background: var(--color-toggler);
+  background: #2e353f;
   transition: all 0.2s ease;
+}
+
+.theme-img {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 3px;
+}
+
+#moon {
+  left: 28px;
+}
+
+#sun {
+  left: 2.5px;
 }
 
 /* dark mode style ends */
