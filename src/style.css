@@ -79,6 +79,7 @@ body {
   --color-heading-black: black;
   --color-accent: #d1dce5;
   --color-background: #eeeeee;
+  --color-toggler: #2e353f;
   --position-left: 0.5px;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
@@ -94,6 +95,7 @@ body.dark {
   --color-heading-black: #EEEEEE;
   --color-accent: #EEEEEE;
   --color-background: #222831;
+  --color-toggler: #eeeeee;
   --position-left: 26px;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -131,7 +133,7 @@ footer {
 
 .light-theme {
   left: var(--position-left);
-  background: var(--color-background);
+  background: var(--color-toggler);
   transition: all 0.2s ease;
 }
 
