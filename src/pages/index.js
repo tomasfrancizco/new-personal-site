@@ -24,6 +24,8 @@ const BlogIndex = ({ data, location }) => {
     )
   }
 
+  console.log(Date())
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
@@ -31,6 +33,9 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
+          const now = Math.floor(Date.now() / 1000);
+          const unixPostDate = Math.floor(Date.parse(post.frontmatter.date) / 1000)
+          console.log("post:", unixPostDate, "now:", now, now - unixPostDate)
           const title = post.frontmatter.title || post.fields.slug
           return !title.includes("NOPOST") ? (
             <li key={post.fields.slug}>
@@ -42,7 +47,7 @@ const BlogIndex = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
+                      <span itemProp="headline">{title} {now < unixPostDate + 63400 ? "- New!" : null}</span>
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
