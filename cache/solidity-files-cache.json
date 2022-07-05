@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/tomasfrancisco/Code/tomas-freire-personal-site/gatsby-starter-blog/contracts/TomasToken.sol": {
-      "lastModificationDate": 1657048250443,
-      "contentHash": "05761a7f02695079fcbb8491beab5e67",
+      "lastModificationDate": 1657051916007,
+      "contentHash": "0270ed868dddf80c943bc2453c2d7c40",
       "sourceName": "contracts/TomasToken.sol",
       "solcConfig": {
         "version": "0.8.4",

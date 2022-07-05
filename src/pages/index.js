@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <div className="navbar">
         <DarkMode id="dark-mode-container"/>
-        <span>|</span><Link to="/token">Claim my token</Link>
+        <span>|</span><Link to="/token">Pedime mi token</Link>
       </div>
       <Bio />
       <ol style={{ listStyle: `none` }}>

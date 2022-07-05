@@ -9,11 +9,11 @@ import TomasToken from "../artifacts/contracts/TomasToken.sol/TomasToken.json";
 const Token = ({ data, location }) => {
   const { title } = data.site.siteMetadata;
 
-  const tokenAddress = "0xFE78443dD29cebFcA0Ff8d8D59c16c30535bc778";
-  
+  // const tokenAddress = "0x47a6cB9E9f88E1Ead25a4BAbc3E86Cd6062a11C3";
+
   return (
     <Layout location={location} title={title}>
-      <div style={{marginBottom: "50px"}}>Coming soon...</div>
+      <div style={{marginBottom: "50px"}}>Próximamente...</div>
       <hr />
         {/* <div className="button-container">
           <button className="token-button">Connect Wallet</button>
