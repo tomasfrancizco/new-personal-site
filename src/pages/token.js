@@ -11,6 +11,10 @@ const Token = ({ data, location }) => {
     <Layout location={location} title={title}>
       <div style={{marginBottom: "50px"}}>Coming soon...</div>
       <hr />
+        {/* <div className="button-container">
+          <button className="token-button">Connect Wallet</button>
+          <button className="token-button">Claim Token</button>
+        </div> */}
       <footer>
         <Bio />
       </footer>
