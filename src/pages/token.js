@@ -4,9 +4,13 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Bio from "../components/bio";
 
+import TomasToken from "../artifacts/contracts/TomasToken.sol/TomasToken.json";
+
 const Token = ({ data, location }) => {
   const { title } = data.site.siteMetadata;
 
+  const tokenAddress = "0xFE78443dD29cebFcA0Ff8d8D59c16c30535bc778";
+  
   return (
     <Layout location={location} title={title}>
       <div style={{marginBottom: "50px"}}>Coming soon...</div>

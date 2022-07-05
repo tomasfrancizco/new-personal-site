@@ -27,7 +27,10 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <DarkMode id="dark-mode-container"/>
+      <div className="navbar">
+        <DarkMode id="dark-mode-container"/>
+        <span>|</span><Link to="/token">Claim my token</Link>
+      </div>
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
