@@ -38,12 +38,10 @@ const Token = ({ data, location }) => {
     const hexa = "0123456789abcdefABCDEF"
     if(receiverAccount.length !== 42 || receiverAccount[0] !== "0" || receiverAccount[1] !== "x"){
       setAddressError(true);
-      console.log("address error")
     }
     for(let i=2;i<receiverAccount.length;i++){
       if(!hexa.includes(receiverAccount[i])) {
         setAddressError(true);
-        console.log("address error")
       }
     }
   }
@@ -71,7 +69,6 @@ const Token = ({ data, location }) => {
       return () => clearInterval(continuousCheck)
     } else {
       setMetamask(false)
-      console.log("What")
     }
   }, [])
 
@@ -92,7 +89,7 @@ const Token = ({ data, location }) => {
           const transaction = await contract.transfer(receiverAccount, "1000000000000000000")
           await transaction.wait();
         }
-      } catch(err){
+      } catch (err) {
         console.log({ err })
       }
     }
@@ -102,12 +99,12 @@ const Token = ({ data, location }) => {
   return (
     <Layout location={location} title={title}>
       <div className="token-container">
-        <input onChange={e => setReceiverAccount(e.target.value)} placeholder="Your ETH account" />
-        <button disabled={disabled} onClick={transferToken}>Claim Token</button>
+        <input onChange={e => setReceiverAccount(e.target.value)} placeholder="Tu dirección de rETH" />
+        <button disabled={disabled} onClick={transferToken}>Enviar 1 TFK</button>
         
-        <div style={{"color": "red"}}>{metamask ? null : "Por favor instala Metamask para continuar" }</div>
-        <div style={{"color": "red"}}>{chain ? null : "Por favor conectate a Ropsten para continuar" }</div>
-        <div style={{"color": "red"}}>{addressError ? "Por favor ingresa una dirección de Ethereum válida" : null } </div>
+        <div style={{"color": "red"}} className="token-error">{metamask ? null : "Por favor instala Metamask para continuar" }</div>
+        <div style={{"color": "red"}} className="token-error">{chain ? null : "Por favor conectate a la red Ropsten para continuar" }</div>
+        <div style={{"color": "red"}} className="token-error">{addressError ? "Por favor ingresa una dirección de Ethereum válida" : null } </div>
       </div>
       <hr />
       {/* <TokenForm transferToken={transferToken}  /> */}

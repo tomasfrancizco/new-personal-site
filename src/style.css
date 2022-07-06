@@ -1,4 +1,6 @@
 /* CSS Custom Properties Definitions */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 
 :root {
   --maxWidth-none: "none";
@@ -162,10 +164,40 @@ footer {
 /* token starts */
 
 .token-container {
+  position: relative;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 200px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+.token-container input {
+  padding: 10px;
+}
+
+.token-container button {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  color: var(--color-background);
+}
+
+.token-error {
+  position: absolute;
+  bottom: -20px;
+}
+
+.token-container input, .token-container button, .token-container div {
+  margin: 5px 0;
 }
 
 .token-box {
