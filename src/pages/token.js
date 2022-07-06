@@ -15,9 +15,7 @@ const Token = ({ data, location }) => {
   const [disabled, setDisabled] = useState(true);
   const [chain, setChain] = useState();
 
-  // const tokenAddress = "0x47a6cB9E9f88E1Ead25a4BAbc3E86Cd6062a11C3";
   const tokenAddress = "0x6a431Ee7F43aAA6cf14175d5986Bc4E2b1311B6A";
-  const receiver = "0x08f88ef7ecD64a2eA1f3887d725F78DDF1bacDF1";
 
   async function requestAccount() {
     const _account = await window.ethereum.request({ method: 'eth_requestAccounts' });
