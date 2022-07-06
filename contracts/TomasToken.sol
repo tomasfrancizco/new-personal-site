@@ -11,7 +11,6 @@ contract TomasToken is ERC20 {
   }
 
   function transfer(address to, uint256 amount) public override returns (bool) {
-    // address owner = _msgSender();
     _transfer(contractOwner, to, amount);
     return true;
   }
