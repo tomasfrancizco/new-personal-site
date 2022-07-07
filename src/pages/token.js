@@ -4,6 +4,7 @@ import { ethers } from 'ethers';
 
 import Layout from "../components/layout";
 import Bio from "../components/bio";
+import Seo from "../components/seo";
 import TokenForm from "../components/token_form";
 
 import TomasToken from "../artifacts/contracts/TomasToken.sol/TomasToken.json";
@@ -11,11 +12,12 @@ import TomasToken from "../artifacts/contracts/TomasToken.sol/TomasToken.json";
 const Token = ({ data, location }) => {
   const { title } = data.site.siteMetadata;
 
-  const [receiverAccount, setReceiverAccount] = useState();
+  const [receiverAccount, setReceiverAccount] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [chain, setChain] = useState(true);
   const [addressError, setAddressError] = useState(false);
   const [metamask, setMetamask] = useState();
+  const [loading, setLoading] = useState(false)
 
   const tokenAddress = "0x6a431Ee7F43aAA6cf14175d5986Bc4E2b1311B6A";
 
@@ -83,11 +85,15 @@ const Token = ({ data, location }) => {
         checkInputAddress(receiverAccount);
         if(!addressError){
           await requestAccount();
+          const user = receiverAccount;
+          setReceiverAccount("");
           const provider = new ethers.providers.Web3Provider(window.ethereum);
           const signer = provider.getSigner();
           const contract = new ethers.Contract(tokenAddress, TomasToken.abi, signer);
-          const transaction = await contract.transfer(receiverAccount, "1000000000000000000")
+          const transaction = await contract.transfer(user, "1000000000000000000")
+          setLoading(true);
           await transaction.wait();
+          setLoading(false)
         }
       } catch (err) {
         console.log({ err })
@@ -98,10 +104,11 @@ const Token = ({ data, location }) => {
 
   return (
     <Layout location={location} title={title}>
+      <Seo title="Token"/>
       <div className="token-container">
-        <input onChange={e => setReceiverAccount(e.target.value)} placeholder="Tu dirección de rETH" />
+        <input onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
         <button disabled={disabled} onClick={transferToken}>Enviar 1 TFK</button>
-        
+        <div className={loading ? "lds-dual-ring" : null}></div>
         <div style={{"color": "red"}} className="token-error">{metamask ? null : "Por favor instala Metamask para continuar" }</div>
         <div style={{"color": "red"}} className="token-error">{chain ? null : "Por favor conectate a la red Ropsten para continuar" }</div>
         <div style={{"color": "red"}} className="token-error">{addressError ? "Por favor ingresa una dirección de Ethereum válida" : null } </div>

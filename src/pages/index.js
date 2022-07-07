@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Home" />
       <div className="navbar">
         <DarkMode id="dark-mode-container"/>
         {/* <span>|</span><Link to="/token">Pedime mi token</Link> */}
