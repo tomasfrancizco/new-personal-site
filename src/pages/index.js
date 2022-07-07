@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="Home" />
       <div className="navbar">
         <DarkMode id="dark-mode-container"/>
-        {/* <span>|</span><Link to="/token">Pedime mi token</Link> */}
+        <span>|</span><Link to="/token" style={{"fontFamily": "'Inconsolata', monospace"}}>Token</Link>
       </div>
       <Bio />
       <ol style={{ listStyle: `none` }}>

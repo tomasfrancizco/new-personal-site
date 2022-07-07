@@ -40,10 +40,12 @@ const Token = ({ data, location }) => {
     const hexa = "0123456789abcdefABCDEF"
     if(receiverAccount.length !== 42 || receiverAccount[0] !== "0" || receiverAccount[1] !== "x"){
       setAddressError(true);
+      return false;
     }
     for(let i=2;i<receiverAccount.length;i++){
       if(!hexa.includes(receiverAccount[i])) {
         setAddressError(true);
+        return false;
       }
     }
   }
@@ -74,29 +76,25 @@ const Token = ({ data, location }) => {
     }
   }, [])
 
-  useEffect(() => {
-
-  }, [addressError])
-
 
   async function transferToken() {
     if (typeof window.ethereum !== 'undefined') {
       try {
-        checkInputAddress(receiverAccount);
-        if(!addressError){
-          await requestAccount();
-          const user = receiverAccount;
-          setReceiverAccount("");
-          const provider = new ethers.providers.Web3Provider(window.ethereum);
-          const signer = provider.getSigner();
-          const contract = new ethers.Contract(tokenAddress, TomasToken.abi, signer);
-          const transaction = await contract.transfer(user, "1000000000000000000")
-          setLoading(true);
-          await transaction.wait();
-          setLoading(false)
-        }
+          if(!checkInputAddress(receiverAccount)){
+            await requestAccount();
+            const user = receiverAccount;
+            setReceiverAccount("");
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(tokenAddress, TomasToken.abi, signer);
+            const transaction = await contract.transfer(user, "1000000000000000000")
+            setLoading(true);
+            await transaction.wait();
+            setLoading(false)
+          }
       } catch (err) {
         console.log({ err })
+        
       }
     }
   }
