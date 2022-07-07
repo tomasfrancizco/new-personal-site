@@ -193,7 +193,7 @@ footer {
 
 .token-error {
   position: absolute;
-  bottom: -20px;
+  bottom: -60px;
 }
 
 .token-container input, .token-container button, .token-container div {

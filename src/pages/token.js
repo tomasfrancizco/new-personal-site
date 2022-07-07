@@ -105,7 +105,7 @@ const Token = ({ data, location }) => {
       <Seo title="Token"/>
       <div className="token-container">
         <h5>TFK Token</h5>
-        <p>Recibilo en la testnet Ropsten.</p>
+        <p style={{"marginTop": "-20px"}}>Recibilo en la testnet Ropsten.</p>
         <input onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
         <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
         <div className={loading ? "lds-dual-ring" : null}></div>
