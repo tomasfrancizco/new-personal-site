@@ -88,6 +88,7 @@ const Token = ({ data, location }) => {
             const signer = provider.getSigner();
             const contract = new ethers.Contract(tokenAddress, TomasToken.abi, signer);
             const transaction = await contract.transfer(user, "1000000000000000000")
+            setAddressError(false);
             setLoading(true);
             await transaction.wait();
             setLoading(false)
@@ -106,7 +107,7 @@ const Token = ({ data, location }) => {
       <div className="token-container">
         <h5>TFK Token</h5>
         <p style={{"marginTop": "-20px"}}>Recibilo en la testnet Ropsten.</p>
-        <input onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
+        <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
         <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
         <div className={loading ? "lds-dual-ring" : null}></div>
         <div style={{"color": "red"}} className="token-error">{metamask ? null : "Por favor instala Metamask para continuar" }</div>
