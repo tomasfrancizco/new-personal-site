@@ -104,8 +104,10 @@ const Token = ({ data, location }) => {
     <Layout location={location} title={title}>
       <Seo title="Token"/>
       <div className="token-container">
+        <h5>TFK Token</h5>
+        <p>Recibilo en la testnet Ropsten.</p>
         <input onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
-        <button disabled={disabled} onClick={transferToken}>Enviar 1 TFK</button>
+        <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
         <div className={loading ? "lds-dual-ring" : null}></div>
         <div style={{"color": "red"}} className="token-error">{metamask ? null : "Por favor instala Metamask para continuar" }</div>
         <div style={{"color": "red"}} className="token-error">{chain ? null : "Por favor conectate a la red Ropsten para continuar" }</div>
