@@ -367,10 +367,21 @@ footer {
 
 /* spinner starts */
 
+.loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+}
+
 .lds-dual-ring {
   display: inline-block;
   position: absolute;
-  bottom: -60px;
   width: 80px;
   height: 80px;
 }

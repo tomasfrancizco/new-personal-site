@@ -103,16 +103,18 @@ const Token = ({ data, location }) => {
         <p style={{"marginTop": "-20px"}}>Recibilo en la testnet Ropsten.</p>
         <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
         <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
-        <div className={loading ? "lds-dual-ring" : null}></div>
-        <div style={{"color": "red"}} className="token-error">{metamask ? null : "Por favor instala Metamask para continuar" }</div>
-        <div style={{"color": "red"}} className="token-error">{chain ? null : "Por favor conectate a la red Ropsten para continuar" }</div>
-        <div style={{"color": "red"}} className="token-error">{addressError ? "Por favor ingresa una dirección de Ethereum válida" : null } </div>
+        <div style={{"color": "red"}} className="token-error">{metamask ? null : "Instala Metamask para continuar" }</div>
+        <div style={{"color": "red"}} className="token-error">{chain ? null : "Conectate a la red Ropsten para continuar" }</div>
+        <div style={{"color": "red"}} className="token-error">{addressError ? "Ingresa una dirección de Ethereum válida" : null } </div>
       </div>
       <hr />
       {/* <TokenForm transferToken={transferToken}  /> */}
       <footer>
         <Bio />
       </footer>
+      <div className={loading ? "loading-container" : null}>
+        <div className={loading ? "lds-dual-ring" : null}></div>
+      </div>
     </Layout>
   )
 }
