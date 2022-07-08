@@ -31,11 +31,6 @@ const Token = ({ data, location }) => {
     return network;
   }
 
-  async function requestAddress() {
-    const address = await window.ethereum.selectedAddress;
-    return address;
-  }
-
   const checkInputAddress = address => {
     const hexa = "0123456789abcdefABCDEF"
     if(receiverAccount.length !== 42 || receiverAccount[0] !== "0" || receiverAccount[1] !== "x"){
@@ -95,7 +90,6 @@ const Token = ({ data, location }) => {
           }
       } catch (err) {
         console.log({ err })
-        
       }
     }
   }

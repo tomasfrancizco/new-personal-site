@@ -191,6 +191,10 @@ footer {
   color: var(--color-background);
 }
 
+.token-container input {
+  width: 90%;
+}
+
 .token-error {
   position: absolute;
   bottom: -60px;
