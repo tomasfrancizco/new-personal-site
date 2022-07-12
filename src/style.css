@@ -170,7 +170,7 @@ footer {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 200px;
-  margin-bottom: 80px;
+  margin-bottom: 135px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,9 +195,10 @@ footer {
   width: 90%;
 }
 
-.token-error {
+.token-error-container {
   position: absolute;
-  bottom: -60px;
+  height: 70px;
+  bottom: -100px;
 }
 
 .token-container input, .token-container button, .token-container div {
