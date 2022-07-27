@@ -100,7 +100,8 @@ const Token = ({ data, location }) => {
       <Seo title="Token"/>
       <div className="token-container">
         <h5>TFK Token</h5>
-        <p style={{"marginTop": "-20px"}}>Recibilo en la testnet Ropsten.</p>
+        <p style={{"margin": "-20px 0 0 0"}}>Recibilo en la testnet Ropsten.</p>
+        <p>Podés agregarlo a tu wallet con <a href="https://ropsten.etherscan.io/address/0x6a431ee7f43aaa6cf14175d5986bc4e2b1311b6a">esta address</a></p>
         <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
         <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
         <div className="token-error-container">

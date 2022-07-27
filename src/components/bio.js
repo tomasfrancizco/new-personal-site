@@ -49,7 +49,7 @@ const Bio = () => {
           <a href={`https://www.medium.com/${social?.medium || ``}`}>
             Follow me on Medium
           </a>
-          {` `}to read my articles in english.
+          {` `}for english version.
         </p>
       )}
     </div>

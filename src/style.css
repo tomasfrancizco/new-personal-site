@@ -165,12 +165,12 @@ footer {
 
 .token-container {
   position: relative;
-  top: 90px;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   height: 200px;
-  margin-bottom: 135px;
+  margin-bottom: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,7 +196,7 @@ footer {
 }
 
 .token-error-container {
-  position: absolute;
+  /* position: absolute; */
   height: 70px;
   bottom: -100px;
 }
