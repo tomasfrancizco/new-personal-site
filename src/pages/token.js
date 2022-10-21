@@ -19,7 +19,7 @@ const Token = ({ data, location }) => {
   const [metamask, setMetamask] = useState();
   const [loading, setLoading] = useState(false)
 
-  const tokenAddress = "0x6a431Ee7F43aAA6cf14175d5986Bc4E2b1311B6A";
+  const tokenAddress = "0x4311c06d1d3160C0B07D29c30E48027C0fE30e3c";
 
   async function requestAccount() {
     const account = await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -48,7 +48,7 @@ const Token = ({ data, location }) => {
   const checkChain = async () => {
     if (typeof window.ethereum !== 'undefined') {
       const network = await requestNetwork()
-      if(network === "3"){
+      if(network === "5"){
         setChain(true);
         setDisabled(false);
       } else {
@@ -100,13 +100,13 @@ const Token = ({ data, location }) => {
       <Seo title="Token"/>
       <div className="token-container">
         <h5>TFK Token</h5>
-        <p style={{"margin": "-20px 0 0 0"}}>Recibilo en la testnet Ropsten.</p>
-        <p>Podés agregarlo a tu wallet con <a href="https://ropsten.etherscan.io/address/0x6a431ee7f43aaa6cf14175d5986bc4e2b1311b6a">esta address</a></p>
-        <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de rETH" />
+        <p style={{"margin": "-20px 0 0 0"}}>Recibilo en la testnet Goerli.</p>
+        <p>Podés agregarlo a tu wallet con <a href="https://goerli.etherscan.io/address/0x4311c06d1d3160C0B07D29c30E48027C0fE30e3c">esta address</a></p>
+        <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de GoerliETH" />
         <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
         <div className="token-error-container">
           <div style={{"color": "red"}} className="token-error">{metamask ? null : "Instala Metamask para continuar" }</div>
-          <div style={{"color": "red"}} className="token-error">{chain ? null : "Conectate a la red Ropsten para continuar" }</div>
+          <div style={{"color": "red"}} className="token-error">{chain ? null : "Conectate a la red Goerli para continuar" }</div>
           <div style={{"color": "red"}} className="token-error">{addressError ? "Ingresa una dirección de Ethereum válida" : null } </div>
         </div>
       </div>

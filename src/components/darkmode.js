@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import sun from '../images/sun.png';
 import moon from '../images/moon.png';
