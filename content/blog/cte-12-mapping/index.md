@@ -1,12 +1,12 @@
 ---
 title: "Capture The Ether: mapping"
 date: "2022-05-09T22:12:03.284Z"
-description: Metámonos de lleno en el diseño de almacenamiento de Ethereum.
+description: This challenge is the first one in which we need to dive into Ethereum’s storage layout.
 ---
 
-[Link to Medium article](https://coinsbench.com/capture-the-ether-mapping-ab24ac2c9244)
+<!-- [Link to Medium article](https://coinsbench.com/capture-the-ether-mapping-ab24ac2c9244)
 
-<!-- Capture The Ether: mapping
+Capture The Ether: mapping
 Este desafío es bastante interesante y particular, ya que es el primero en el que debemos sumergirnos en el diseño de almacenamiento de Ethereum.
 
 Empecemos revisando el contrato:
@@ -71,8 +71,7 @@ Tenga en cuenta también que este problema se ha resuelto desde el compilador de
 
 ¡Impresionante! En el próximo artículo, resolveremos "Donación". -->
 
-<!-- 
-Capture The Ether: mapping
+
 This challenge is quite interesting and particular as it’s the first one in which we need to dive into Ethereum’s storage layout.
 
 Let’s start by taking a look at the contract:
@@ -96,11 +95,11 @@ What concerns us now are the DSAs. As they have unpredictable sizes, they can no
 
 E.g.:
 
-uint256[] public arr = [1, 2, 3];
+`uint256[] public arr = [1, 2, 3];`
 
 Assuming this is the first line in our contract, the length of the DSA arr will be stored in slot 0 and the values will be stored starting on slot number keccak256(0), this is…
 
-uint256 valuesSlot = 18569430475105882587588266137607568536673111973893317399460219858819262702947
+`uint256 valuesSlot = 18569430475105882587588266137607568536673111973893317399460219858819262702947`
 
 So, if we read valuesSlot we’ll get 1, valuesSlot + 1 we’ll get 2 and so on.
 
@@ -114,7 +113,7 @@ bool public isComplete;
 
 And themap’s length stored in slot 1, while their soon to be values will be stored starting (with map[0]) in keccak(1), that is
 
-valuesSlot = 80084422859880547211683076133703299733277748156566366325829078699459944778998
+`valuesSlot = 80084422859880547211683076133703299733277748156566366325829078699459944778998`
 
 Having all of this in mind and our objective being changing storage slot 0’s value from 0 (false) to 1 (true), what we need to do is overflow storage slots (remember that the contract has 2²⁵⁶ of them) by accessing the correct array’s index.
 
@@ -124,9 +123,12 @@ In the challenge’s case, this will be attackSlot = 357076663774356482118879088
 
 There is something else we need to know although it’s already dealt with in the challenge’s contract. To access any slot like this, it needs to be part of the array, which means that the index must always be < array.length. And that’s the purpose of these lines in the set function:
 
+```
 if (map.length <= key) {
   map.length = key + 1;
 }
+```
+
 So, to solve the challenge, we must call set(attackSlot, 1);
 
 Conclusion: although it may not be apparent at first, we must understand and be very careful with how storage works in Ethereum, as it might be a potential attack vector.
@@ -134,4 +136,4 @@ Conclusion: although it may not be apparent at first, we must understand and be 
 Please also note that this issue has been solved from solidity compiler ≥ 0.6.0.
 
 
-Awesome! In the next article, we’ll be solving “Donation”. -->
+Awesome! In the next article, we’ll be solving “Donation”.

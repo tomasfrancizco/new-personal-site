@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: setup"
 date: "2021-12-20T22:40:32.169Z"
-description: Este es el primero de varios artículos que voy a escribir en los que voy a analizar, explicar y resolver algunos desafíos CTF (Capture The Flag) del ecosistema Ethereum..
+description: This is the first of multiple articles i’m going to write in which i’ll analyse, explain and solve some CTF (Capture The Flag) challenges of the Ethereum ecosystem.
 ---
 
 [Link to Medium article](https://medium.com/@tomasfrancisco/capture-the-flag-setup-4f4e5b2658f8)

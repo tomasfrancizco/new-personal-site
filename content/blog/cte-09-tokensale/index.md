@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: token sale"
 date: "2022-03-15T22:12:03.284Z"
-description: Con el inicio de un nuevo capítulo de vulnerabilidades, empieza una nueva serie de puertas traseras y oportunidades de hackeo 🥳
+description: With the beginning of a new chapter of vulnerabilities, comes a new set of backdoors and hacking opportunities 🥳.
 ---
 
 [Link to Medium article](https://systemweakness.com/capture-the-ether-token-sale-fcbc4ecb8a11)

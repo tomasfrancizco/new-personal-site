@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: token whale"
 date: "2022-03-29T22:12:03.284Z"
-description: En este desafío intentaremos acumular más de 1 millón de tokens.
+description: In this challenge we'll try to accumulate more than 1 millon tokens.
 ---
 
 [Link to Medium article](https://coinsbench.com/capture-the-ether-token-whale-8d33ea2fd754)

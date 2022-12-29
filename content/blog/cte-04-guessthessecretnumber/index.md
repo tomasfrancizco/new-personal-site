@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: guess the secret number"
 date: "2021-12-26T22:12:03.284Z"
-description: El objetivo de este desafío es adivinar el número 'secreto'. Pero qué tan secreto es?
+description: The objective of this challenge is to guess a ‘secret’ number. But is it?
 ---
 
 [Link to Medium article](https://medium.com/@tomasfrancisco/capture-the-ether-guess-the-secret-number-3a146be0e0ed)

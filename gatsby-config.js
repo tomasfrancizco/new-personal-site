@@ -3,7 +3,7 @@ module.exports = {
     title: `Tomás Freire Knight`,
     author: {
       name: `Tomás`,
-      summary: `desarrollador solidity y javascript de Buenos Aires, con un gran interés por la seguridad en Smart Contracts.`,
+      summary: `web & blockchain developer with a huge interest in Smart Contract Security, currently based in Buenos Aires.`,
     },
     description: `A blockchain/ethereum/solidity smart contracts security blog`,
     siteUrl: `https://www.tomasfreire.com`,

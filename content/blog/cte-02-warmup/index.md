@@ -1,7 +1,7 @@
 ---
 title: "Capture The Ether: warmup"
 date: "2021-12-22T22:12:03.284Z"
-description: En este artículo vamos a empezar con los primeros tres desafíos de "Capture The Ether". Estos son solo ejercicios de calentamiento y no se necesita mucho análisis de seguridad.
+description: In this article we’ll start with the first three challenges from Capture The Ether. These are just warmup exercises and not much security analysis is necessary.
 ---
 
 [Link to Medium article](https://medium.com/@tomasfrancisco/capture-the-ether-warmup-7b3183469e17)
