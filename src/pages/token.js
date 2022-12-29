@@ -100,14 +100,14 @@ const Token = ({ data, location }) => {
       <Seo title="Token"/>
       <div className="token-container">
         <h5>TFK Token</h5>
-        <p style={{"margin": "-20px 0 0 0"}}>Recibilo en la testnet Goerli.</p>
-        <p>Podés agregarlo a tu wallet con <a href="https://goerli.etherscan.io/address/0x4311c06d1d3160C0B07D29c30E48027C0fE30e3c">esta address</a></p>
-        <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Tu dirección de GoerliETH" />
-        <button disabled={disabled} onClick={transferToken}>Recibir 1 TFK</button>
+        <p style={{"margin": "-20px 0 0 0"}}>Receive it on Goerli testnet</p>
+        <p>You can add it to your wallet using <a href="https://goerli.etherscan.io/address/0x4311c06d1d3160C0B07D29c30E48027C0fE30e3c">this address</a></p>
+        <input disabled={disabled} onChange={e => setReceiverAccount(e.target.value)} value={receiverAccount} placeholder="Your GoerliETH address" />
+        <button disabled={disabled} onClick={transferToken}>Receive 1 TFK</button>
         <div className="token-error-container">
-          <div style={{"color": "red"}} className="token-error">{metamask ? null : "Instala Metamask para continuar" }</div>
-          <div style={{"color": "red"}} className="token-error">{chain ? null : "Conectate a la red Goerli para continuar" }</div>
-          <div style={{"color": "red"}} className="token-error">{addressError ? "Ingresa una dirección de Ethereum válida" : null } </div>
+          <div style={{"color": "red"}} className="token-error">{metamask ? null : "Install Metamask to continue" }</div>
+          <div style={{"color": "red"}} className="token-error">{chain ? null : "Connect to Goerli testnet to continue" }</div>
+          <div style={{"color": "red"}} className="token-error">{addressError ? "Please enter a valid Ethereum address" : null } </div>
         </div>
       </div>
       <hr />
